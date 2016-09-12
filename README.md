@@ -16,6 +16,8 @@ Clone or Download the source
 |   └── AppSpec.js
 ├── src
 |   └── app.js
+├── css
+|   └── style.css
 ├── README.md
 ├── SpecRunner.html
 └── index.html

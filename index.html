@@ -3,28 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>AGL Developer Test</title>
-  <style type="text/css">
-  	#result > ul {
-  		list-style: none;
-  	}
-  	ul ul {
-  		list-style-type: disc;
-  	}
-  	li {
-  		padding: 5px;
-  	}
-  </style>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div id="result"></div>
+	<div id="result">
+		<div class="loader-div">
+			<div class="loading"></div>
+			<div>loading data from jsonp service</div>
+		</div>
+	</div>
 
 	<script src="lib/lodash.min.js"></script>
 	<script src="src/app.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function(event) {
 			var url = 'http://agl-developer-test.azurewebsites.net/people.json';
-			jsonp(url, function(data) {
-				var compiled = _.template(document.getElementById('listTmpl').innerHTML);
+			jsonp(url, (data) => {
+				const compiled = _.template(document.getElementById('listTmpl').innerHTML);
 				document.getElementById('result').innerHTML = compiled({data: filterCats(data)});
 			})
 		});
