@@ -21,6 +21,15 @@ Clone or Download the source
 └── index.html
 ```
 
+## Built with
+
+```
+* Vanilla Javascript (ES2015) - functionality and jsonp call
+* lodash - util for array and object parsing and templating
+* Jasmine - Test suite
+```
+(**Technical Note**: *Could also be built as a node project using tasker tools like grunt/gulp/webpack and unit tests with tools like karma*)
+
 ### Running App
 
 ```
@@ -40,13 +49,6 @@ This test suite contains following specs
 * Validating alphabetical sorting of modified and filtered response
 ```
 
-## Built with
-
-```
-* Javascript - functionality and jsonp call
-* lodash - util for array and object parsing and templating
-* Jasmine - Test suite
-```
 
 ## Authors
 * [Sandeep Kumar Vemula](https://github.com/bittu)
